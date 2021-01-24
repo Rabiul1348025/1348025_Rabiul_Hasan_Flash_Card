@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="contiqo.co.flashcards">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FlashCard"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:replace="android:label">
+        <activity android:name=".Archive"></activity>
+        <activity android:name=".Remove" />
+        <activity android:name=".edit" />
+        <activity android:name=".search" />
+        <activity android:name=".About" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Help" />
+        <activity android:name=".AddCard" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@menu/menu" />
+
+        <activity android:name=".FlashCard" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchableActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+    </application>
+
+</manifest>
